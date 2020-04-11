@@ -1,0 +1,19 @@
+debug: false
+clave: key
+broadcast:
+  activado: true
+  mensajeBroadcast: '&aGracias a {0} por votarnos! El ya ha obtenido su premio, usa
+    &2/voto40&a y obten el tuyo'
+mensajePremio: '&6Gracias por votarnos {0}, obtendras una llave. Si tienes tu inventario
+  lleno escribe &a/cr claim&6.'
+prefix: '&8[&aAdvancedVote&8] &f»'
+novotaste: '&cNo has votado hoy :(! &aPuedes hacerlo en &5'
+yapremiado: '&aGracias por votar, pero ya has obtenido tu premio!'
+error: '&7Ha ocurrido un error. Prueba mas tarde o avisa a un adminsitrador'
+espera: '&6No puedes ejecutar este comando tantas veces seguidas!'
+nopermiso: '&cNo tienes permiso para usar este comando'
+obteniendo: '&7Obteniendo voto...'
+noexiste: '&cEl comando no existe.'
+comando: 'give {0} tripwire_hook 1'
+readTimeOut: 5000
+configVer: 3
