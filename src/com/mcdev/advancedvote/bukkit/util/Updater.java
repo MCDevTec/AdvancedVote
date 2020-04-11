@@ -8,14 +8,14 @@ import com.mcdev.advancedvote.bukkit.BukkitPlugin;
 import java.util.Optional;
  
 /**
- * Clase para comprobar las actualizaciones a trav茅s de Github
+ * Clase para comprobar las actualizaciones a trav脙漏s de Github
  * @author MCDev
  */
 public class Updater {
 
     private static String versionInstalada, versionMinecraft;
     private static BukkitPlugin plugin;
-    private final String readurl = "https://raw.githubusercontent.com/MCDevTec/Vote40MC/master/etc/v.json"; //TODO Mantener ruta actualizada
+    private final String readurl = "https://raw.githubusercontent.com/MCDevTec/AdvancedVote/master/etc/v.json"; //TODO Mantener ruta actualizada
 
     public Updater(BukkitPlugin instance, String vInstalada, String vMinecraft) {
         plugin = instance;
@@ -23,19 +23,19 @@ public class Updater {
         versionMinecraft = vMinecraft;
     }
     
-    private final String ERROR = "&cError obteniendo la versi髇.";
+    private final String ERROR = "&cError obteniendo la versi贸n.";
     private final String DISABLED = "&cEl Updater ha sido remotamente desactivado debido a un mantenimiento";
-    private final String UPDATED = "&aVersi髇 actualizada";
-    private final String NOVERSION = "&cNo se ha encontrado plugin para la versi髇 de servidor que estas ejecutando";
-    private final String NEWVERSION = "&cVersi髇 desactualizada. &aNueva versi髇: %s. &6Changelog: %s. Descarga en: %s";
+    private final String UPDATED = "&aVersi贸n actualizada";
+    private final String NOVERSION = "&cNo se ha encontrado plugin para la versi贸n de servidor que estas ejecutando";
+    private final String NEWVERSION = "&cVersi贸n desactualizada. &aNueva versi贸n: %s. &6Changelog: %s. Descarga en: %s";
 
     /**
-     * Comprobar si hay nueva versi髇
-     * @param send Opcional. Jugador al que se avisar帷
-     * @param boot Si es al iniciar o no. Avisar帷 de que est帷 actualizado depende de eso
+     * Comprobar si hay nueva versi贸n
+     * @param send Opcional. Jugador al que se avisar谩隆
+     * @param boot Si es al iniciar o no. Avisar谩隆 de que est谩隆 actualizado depende de eso
      */
     public void checkearVersion(CommandSender send, boolean boot) {
-        plugin.debugLog("Buscando nueva versi髇...");
+        plugin.debugLog("Buscando nueva versi贸n...");
         Optional<CommandSender> sender = Optional.ofNullable(send);
         Util.readUrl(readurl, (ApiResponse response) -> {
             if (response.getException().isPresent()) {
